@@ -73,10 +73,23 @@ Make sure to deploy the output of `npm run build`
 │   └── server/    # Server-side code
 ```
 
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
 Built with ❤️ using React Router.
+
+## Environment Variables
+
+### Required Environment Variables
+
+| Environment              | Description              | Default Value                      |
+| ------------------------ | ------------------------ | ---------------------------------- |
+| NEXT_PUBLIC_API_BASE_URL | Postgres connection URLs | postgres://r1:r1@localhost:5432/r1 |
+
+## Drizzle
+
+```bash
+# https://orm.drizzle.team/docs/drizzle-kit-push
+npx drizzle-kit push
+
+# https://orm.drizzle.team/docs/kit-overview
+npx drizzle-kit generate
+npx drizzle-kit migrate
+```
