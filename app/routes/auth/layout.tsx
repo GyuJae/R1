@@ -5,6 +5,7 @@ import { LoginWithGoogle } from '~/domains/auth/usecases/login-with-google';
 import { LoginWithApple } from '~/domains/auth/usecases/login-with-apple';
 import { LoginWithKaKao } from '~/domains/auth/usecases/login-with-kakao';
 import { AuthNavigateContext } from './contexts/auth-navigate.context';
+import { RoutePaths } from '~/common/constants/route-paths';
 
 const LOGIN_WITH_GOOGLE = container.resolve(LoginWithGoogle);
 const LOGIN_WITH_APPLE = container.resolve(LoginWithApple);
@@ -23,7 +24,7 @@ export default function AuthLayout() {
         kakao: LOGIN_WITH_KAKAO,
       }}
     >
-      <AuthNavigateContext value={{ goAlbum: () => navigate('/albums') }}>
+      <AuthNavigateContext value={{ goAlbum: () => navigate(RoutePaths.ALBUMS.path) }}>
         <Outlet />
       </AuthNavigateContext>
     </LoginContext>
