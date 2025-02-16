@@ -61,9 +61,9 @@ Built with ❤️ using React Router.
 
 ### Required Environment Variables
 
-| Environment              | Description              | Default Value                      |
-| ------------------------ | ------------------------ | ---------------------------------- |
-| NEXT_PUBLIC_API_BASE_URL | Postgres connection URLs | postgres://r1:r1@localhost:5432/r1 |
+| Environment  | Description              | Default Value                      |
+| ------------ | ------------------------ | ---------------------------------- |
+| DATABASE_URL | Postgres connection URLs | postgres://r1:r1@localhost:5432/r1 |
 
 ## Drizzle
 
