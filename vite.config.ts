@@ -10,11 +10,11 @@ export default defineConfig({
     ssr: false,
   },
   test: {
+    setupFiles: ['./tests/setup-tests.ts'],
     environment: 'jsdom',
     globals: true,
     env: {
-      // TODO Replace Test Database URL
-      DATABASE_URL: 'postgres://r1:r1@localhost:5432/r1',
+      DATABASE_URL: 'postgres://r1_test:r1_test@localhost:5433/r1_test',
     },
   },
 });

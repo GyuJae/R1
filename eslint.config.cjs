@@ -9,7 +9,8 @@ module.exports = [
       '**/*.spec.ts',
       '**/*.spec.tsx',
       'react-router.config.ts',
-      'eslint/**'
+      'eslint/**',
+      'tests/setup-tests.ts',
     ],
   },
   ...baseConfig,

@@ -17,8 +17,25 @@ services:
     networks:
       - my_network
 
+  postgres_test:
+    image: postgres:17-alpine
+    platform: linux/amd64
+    restart: always
+    environment:
+      POSTGRES_USER: r1_test
+      POSTGRES_PASSWORD: r1_test
+      POSTGRES_DB: r1_test
+      TZ: UTC
+    ports:
+      - '5433:5432'
+    volumes:
+      - postgres_test_data_arm64:/var/lib/postgresql/data
+    networks:
+      - my_network
+
 volumes:
   postgres_data_arm64:
+  postgres_test_data_arm64:
 
 networks:
   my_network:

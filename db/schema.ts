@@ -1,5 +1,6 @@
 import { pgTable, uuid, text, boolean, jsonb, timestamp } from 'drizzle-orm/pg-core';
 
+// https://supabase.com/docs/guides/auth/users
 export const usersTable = pgTable('users', {
   id: uuid('id').defaultRandom().primaryKey(),
   aud: text('aud').notNull(),
@@ -18,6 +19,7 @@ export const usersTable = pgTable('users', {
   isAnonymous: boolean('is_anonymous').default(false),
 });
 
+// https://supabase.com/docs/guides/auth/identities
 export const identitiesTable = pgTable('identities', {
   id: uuid('id').defaultRandom().primaryKey(),
   providerId: text('provider_id').notNull(),
@@ -31,3 +33,5 @@ export const identitiesTable = pgTable('identities', {
   lastSignInAt: timestamp('last_sign_in_at'),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
+
+export const channelsTable = pgTable('channels', {});
